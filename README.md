@@ -11,3 +11,7 @@ cd ktserver-docker
 docker build -t username/ktserver .
 docker run -d --name ktserver -p 11211:11211 username/ktserver
 ```
+or just run
+```
+docker run -d --name ktserver -p 11211:11211 narate/ktserver
+```
