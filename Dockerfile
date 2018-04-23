@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.4
 MAINTAINER Narate Ketram <rate@dome.cloud>
 
 RUN apk update && apk add git build-base lua5.1-dev lzo-dev zlib-dev
