@@ -1,7 +1,7 @@
 FROM alpine:3.7
 MAINTAINER Narate Ketram <rate@dome.cloud>
 
-RUN apk add --update --no-cache git build-base lua5.1-dev lzo-dev zlib-dev
+RUN apk update && apk add git build-base lua5.1-dev lzo-dev zlib-dev
 RUN cd /tmp && \
 	git clone https://github.com/narate/kyoto.git && \
 	cd kyoto && \
