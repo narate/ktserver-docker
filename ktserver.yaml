@@ -25,3 +25,5 @@ spec:
     app: ktserver
   ports:
     - port: 11211
+      targetPort: 11211
+      protocol: TCP
