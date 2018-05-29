@@ -1,0 +1,27 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: ktserver
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ktserver
+    spec:
+      containers:
+      - name: ktserver
+        image: narate/ktserver
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 11211
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ktserver
+spec:
+  selector:
+    app: ktserver
+  ports:
+    - port: 11211
